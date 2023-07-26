@@ -1,0 +1,40 @@
+html 
+head 
+link(rel="stylesheet" href="/css/bootstrap.min.css")
+script(src="/js/bootstrap.js") 
+
+
+title= page
+body 
+
+br
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    include nav.pug 
+
+    </div>
+
+</div>
+
+<br>
+
+
+
+  case page
+    when 'home'
+
+
+      include totals.pug
+
+    when 'ingreso'
+      include ingreso.pug
+
+    when 'egreso'
+      include ingreso.pug
+
+
+    default
+      h1 Page Not Found
+

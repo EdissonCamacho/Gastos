@@ -1,0 +1,22 @@
+.container
+      h1 Mi Acordeón con Formulario en Bootstrap
+      #accordion
+        // Panel 1
+        .card
+          .card-header
+            h2
+              button.btn.btn-link(type='button', data-bs-toggle='collapse', data-bs-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                | Panel 1
+          .collapse.show(id='collapseOne', aria-labelledby='headingOne', data-bs-parent='#accordion')
+            .card-body
+              form
+                .mb-3
+                  label(for='inputNombre' class='form-label') Nombre
+                  input#inputNombre.form-control(type='text', placeholder='Ingresa tu nombre', name='nombre')
+                .mb-3
+                  label(for='inputEmail' class='form-label') Email
+                  input#inputEmail.form-control(type='email', placeholder='Ingresa tu email', name='email')
+                .mb-3
+                  label(for='inputMensaje' class='form-label') Mensaje
+                  textarea#inputMensaje.form-control(rows='3', placeholder='Escribe tu mensaje', name='mensaje')
+                button.btn.btn-primary(type='submit') Enviar

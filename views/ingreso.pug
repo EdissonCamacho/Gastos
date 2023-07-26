@@ -1,0 +1,82 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Crear Nuevo +
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Crear Igreso</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            .container
+form(action='#{ruta}' method='post')
+    .mb-3
+        label(for='nombre' class='form-label') Descripcion:
+        input#nombre.form-control(type='text' name='descripcion', required)
+    .mb-3
+        label(for='edad' class='form-label') Valor:
+        input#edad.form-control(type='number' name='valor', required)
+    .mb-3
+        label(for='edad' class='form-label') Dia:
+        input#edad.form-control(type='date' name='dia', required)
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            button.btn.btn-primary(type='submit') Enviar
+
+    </div>
+
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+
+    table.table.table-striped.table-bordered
+        thead
+            tr
+                th #
+                th Descripcion: 
+                th Valor:
+                th Dia:
+                th Accion:
+                
+        tbody
+            each task in registros
+                tr
+                    td #{task.id}
+                    td #{task.descripcion}
+                    td #{task.valor}
+                    td #{task.dia}
+                    td <a href='#{ruta}/#{task._id}?_method=DELETE' class='btn btn-danger' >Eliminar</a>
+                    
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
